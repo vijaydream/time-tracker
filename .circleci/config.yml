@@ -24,3 +24,16 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+jobs:
+  example-job:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - docker/build:
+          image: ubuntu 20 
+
+workflows:
+  example-workflow:
+    jobs:
+      - example-job      
